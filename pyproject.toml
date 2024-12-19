@@ -14,7 +14,7 @@ license = {text = "MIT"}
 dependencies = [
     "requests>=2.25.1",
     "pandas>=1.3.0",
-    "shipay-api-wallets=v0.0.2"
+    "shipay-api-wallets=0.0.1"
 ]
 
 [tool.setuptools.packages.find]
