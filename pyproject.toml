@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "orders"
+version = "0.1.0"
+description = "An example Python project."
+readme = "README.md"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+license = {text = "MIT"}
+dependencies = [
+    "requests>=2.25.1",
+    "pandas>=1.3.0",
+    "shipay-api-wallets=0.0.1"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+exclude = ["tests"]
+
+[tool.black]
+line-length = 88
+target-version = ["py39"]
+
+[tool.isort]
+profile = "black"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--strict-markers"
+testpaths = ["tests"]
+
+[tool.mypy]
+python_version = "3.9"
+ignore_missing_imports = true
+strict_optional = true
